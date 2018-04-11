@@ -33,7 +33,7 @@ Partial Class VentanaInicial
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(266, 24)
+        Me.Label1.Location = New System.Drawing.Point(201, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(366, 20)
         Me.Label1.TabIndex = 0
@@ -41,10 +41,10 @@ Partial Class VentanaInicial
         '
         'ComboBox1
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Detectar enfermedad de empleado", "Visualizar mapa", "Visualizar enfermedades en tabla", "Localizar enfermedad según país "})
-        Me.ComboBox1.Location = New System.Drawing.Point(316, 70)
+        Me.ComboBox1.Location = New System.Drawing.Point(259, 60)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(251, 24)
         Me.ComboBox1.TabIndex = 1
@@ -52,9 +52,10 @@ Partial Class VentanaInicial
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(392, 122)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Button1.Location = New System.Drawing.Point(347, 112)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(75, 50)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Entrar"
         Me.Button1.UseVisualStyleBackColor = True
@@ -62,7 +63,7 @@ Partial Class VentanaInicial
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.GestorEpidemias.My.Resources.Resources.Logo1
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 15)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(171, 151)
         Me.PictureBox1.TabIndex = 3
@@ -72,7 +73,7 @@ Partial Class VentanaInicial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 178)
+        Me.ClientSize = New System.Drawing.Size(586, 176)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
