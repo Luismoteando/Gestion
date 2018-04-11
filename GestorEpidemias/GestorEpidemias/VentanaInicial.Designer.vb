@@ -61,9 +61,10 @@ Partial Class VentanaInicial
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(37, 24)
+        Me.PictureBox1.Image = Global.GestorEpidemias.My.Resources.Resources.Logo1
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 15)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(161, 121)
+        Me.PictureBox1.Size = New System.Drawing.Size(171, 151)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
