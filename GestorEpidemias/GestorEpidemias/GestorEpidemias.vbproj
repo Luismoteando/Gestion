@@ -83,9 +83,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enfermedad.vb" />
-    <Compile Include="DAOEpidemias.vb" />
-    <Compile Include="DBBroker.vb" />
+    <Compile Include="Dominio\Enfermedad.vb" />
+    <Compile Include="LocalizarEnfermedad.Designer.vb">
+      <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizarEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Persistencia\DAOEpidemias.vb" />
+    <Compile Include="Persistencia\DBBroker.vb" />
     <Compile Include="DetectarEnfermedad.Designer.vb">
       <DependentUpon>DetectarEnfermedad.vb</DependentUpon>
     </Compile>
@@ -120,10 +126,19 @@
     <Compile Include="VisualizarMapa.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VisualizarTabla.Designer.vb">
+      <DependentUpon>VisualizarTabla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarTabla.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DetectarEnfermedad.resx">
       <DependentUpon>DetectarEnfermedad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalizarEnfermedad.resx">
+      <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaInicial.resx">
       <DependentUpon>VentanaInicial.vb</DependentUpon>
@@ -136,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VisualizarMapa.resx">
       <DependentUpon>VisualizarMapa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualizarTabla.resx">
+      <DependentUpon>VisualizarTabla.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +171,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentación\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

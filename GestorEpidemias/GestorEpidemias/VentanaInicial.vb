@@ -6,4 +6,15 @@
             MsgBox(a._nombre)
         Next
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If (ComboBox1.SelectedIndex = 0) Then
+            DetectarEnfermedad.Show()
+        ElseIf (ComboBox1.SelectedIndex = 1) Then
+            VisualizarMapa.Show()
+        ElseIf (ComboBox1.SelectedIndex = 2) Then
+        ElseIf (ComboBox1.SelectedIndex = 3) Then
+        End If
+    End Sub
+
 End Class

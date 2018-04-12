@@ -23,6 +23,9 @@ Partial Class VisualizarMapa
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GMapControl1 = New GMap.NET.WindowsForms.GMapControl()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'GMapControl1
@@ -33,7 +36,7 @@ Partial Class VisualizarMapa
         Me.GMapControl1.GrayScaleMode = False
         Me.GMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow
         Me.GMapControl1.LevelsKeepInMemmory = 5
-        Me.GMapControl1.Location = New System.Drawing.Point(313, 145)
+        Me.GMapControl1.Location = New System.Drawing.Point(16, 78)
         Me.GMapControl1.MarkersEnabled = True
         Me.GMapControl1.MaxZoom = 2
         Me.GMapControl1.MinZoom = 2
@@ -47,21 +50,58 @@ Partial Class VisualizarMapa
         Me.GMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.[Integer]
         Me.GMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(65, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(225, Byte), Integer))
         Me.GMapControl1.ShowTileGridLines = False
-        Me.GMapControl1.Size = New System.Drawing.Size(150, 150)
+        Me.GMapControl1.Size = New System.Drawing.Size(772, 294)
         Me.GMapControl1.TabIndex = 0
         Me.GMapControl1.Zoom = 0R
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(419, 20)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Seleccione la enfermedad que quiere localizar en el mapa:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(16, 43)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(246, 24)
+        Me.ComboBox1.TabIndex = 2
+        Me.ComboBox1.Text = "Enfermedad"
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Button1.Location = New System.Drawing.Point(363, 386)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 50)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Volver"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'VisualizarMapa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GMapControl1)
         Me.Name = "VisualizarMapa"
         Me.Text = "VisualizarMapa"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents GMapControl1 As GMap.NET.WindowsForms.GMapControl
+    Friend WithEvents Label1 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
