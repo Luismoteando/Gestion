@@ -22,6 +22,7 @@ Partial Class DetectarEnfermedad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DetectarEnfermedad))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -46,7 +47,7 @@ Partial Class DetectarEnfermedad
         Me.CheckedListBox1.FormattingEnabled = True
         Me.CheckedListBox1.Location = New System.Drawing.Point(98, 68)
         Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(185, 199)
+        Me.CheckedListBox1.Size = New System.Drawing.Size(185, 184)
         Me.CheckedListBox1.TabIndex = 1
         '
         'Label2
@@ -99,8 +100,9 @@ Partial Class DetectarEnfermedad
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.CheckedListBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DetectarEnfermedad"
-        Me.Text = "Detectar Enfermedad de Empleado"
+        Me.Text = "Detectar enfermedad de empleado"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

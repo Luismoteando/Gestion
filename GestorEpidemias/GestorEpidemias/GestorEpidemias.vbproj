@@ -170,6 +170,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icono.ico" />
     <Content Include="Logo.png" />
   </ItemGroup>
   <ItemGroup>

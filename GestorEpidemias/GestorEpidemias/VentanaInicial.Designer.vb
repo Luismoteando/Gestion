@@ -22,6 +22,7 @@ Partial Class VentanaInicial
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VentanaInicial))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -43,7 +44,7 @@ Partial Class VentanaInicial
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Detectar enfermedad de empleado", "Visualizar mapa", "Visualizar enfermedades en tabla", "Localizar enfermedad según país "})
+        Me.ComboBox1.Items.AddRange(New Object() {"Detectar enfermedad de empleado", "Visualizar enfermedades en mapa", "Visualizar enfermedades en tabla", "Localizar enfermedad según país "})
         Me.ComboBox1.Location = New System.Drawing.Point(259, 60)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(251, 24)
@@ -78,6 +79,7 @@ Partial Class VentanaInicial
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VentanaInicial"
         Me.Text = "Gestor de Epidemias"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

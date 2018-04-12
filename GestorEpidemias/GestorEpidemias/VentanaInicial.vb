@@ -13,7 +13,9 @@
         ElseIf (ComboBox1.SelectedIndex = 1) Then
             VisualizarMapa.Show()
         ElseIf (ComboBox1.SelectedIndex = 2) Then
+            VisualizarTabla.Show()
         ElseIf (ComboBox1.SelectedIndex = 3) Then
+            LocalizarEnfermedad.Show()
         End If
     End Sub
 

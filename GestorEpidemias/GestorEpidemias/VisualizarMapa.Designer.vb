@@ -22,6 +22,7 @@ Partial Class VisualizarMapa
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(VisualizarMapa))
         Me.GMapControl1 = New GMap.NET.WindowsForms.GMapControl()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -93,8 +94,9 @@ Partial Class VisualizarMapa
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GMapControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "VisualizarMapa"
-        Me.Text = "VisualizarMapa"
+        Me.Text = "Visualizar enfermedades en mapa"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
