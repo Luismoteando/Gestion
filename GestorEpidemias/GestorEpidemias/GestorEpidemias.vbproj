@@ -84,24 +84,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dominio\Enfermedad.vb" />
-    <Compile Include="LocalizarEnfermedad.Designer.vb">
+    <Compile Include="Presentación\LocalizarEnfermedad.Designer.vb">
       <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
     </Compile>
-    <Compile Include="LocalizarEnfermedad.vb">
+    <Compile Include="Presentación\LocalizarEnfermedad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Persistencia\DAOEpidemias.vb" />
     <Compile Include="Persistencia\DBBroker.vb" />
-    <Compile Include="DetectarEnfermedad.Designer.vb">
+    <Compile Include="Presentación\DetectarEnfermedad.Designer.vb">
       <DependentUpon>DetectarEnfermedad.vb</DependentUpon>
     </Compile>
-    <Compile Include="DetectarEnfermedad.vb">
+    <Compile Include="Presentación\DetectarEnfermedad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaInicial.vb">
+    <Compile Include="Presentación\VentanaInicial.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaInicial.Designer.vb">
+    <Compile Include="Presentación\VentanaInicial.Designer.vb">
       <DependentUpon>VentanaInicial.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -120,27 +120,27 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="VisualizarMapa.Designer.vb">
+    <Compile Include="Presentación\VisualizarMapa.Designer.vb">
       <DependentUpon>VisualizarMapa.vb</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarMapa.vb">
+    <Compile Include="Presentación\VisualizarMapa.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VisualizarTabla.Designer.vb">
+    <Compile Include="Presentación\VisualizarTabla.Designer.vb">
       <DependentUpon>VisualizarTabla.vb</DependentUpon>
     </Compile>
-    <Compile Include="VisualizarTabla.vb">
+    <Compile Include="Presentación\VisualizarTabla.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DetectarEnfermedad.resx">
+    <EmbeddedResource Include="Presentación\DetectarEnfermedad.resx">
       <DependentUpon>DetectarEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LocalizarEnfermedad.resx">
+    <EmbeddedResource Include="Presentación\LocalizarEnfermedad.resx">
       <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentanaInicial.resx">
+    <EmbeddedResource Include="Presentación\VentanaInicial.resx">
       <DependentUpon>VentanaInicial.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -149,10 +149,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="VisualizarMapa.resx">
+    <EmbeddedResource Include="Presentación\VisualizarMapa.resx">
       <DependentUpon>VisualizarMapa.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VisualizarTabla.resx">
+    <EmbeddedResource Include="Presentación\VisualizarTabla.resx">
       <DependentUpon>VisualizarTabla.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -173,8 +173,6 @@
     <Content Include="Icono.ico" />
     <Content Include="Logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presentación\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
