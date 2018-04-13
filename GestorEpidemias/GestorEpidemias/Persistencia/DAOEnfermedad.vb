@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Public Class DAOEpidemias
+Public Class DAOEnfermedad
     Private _lista As Collection
 
     Public Property lista As Collection

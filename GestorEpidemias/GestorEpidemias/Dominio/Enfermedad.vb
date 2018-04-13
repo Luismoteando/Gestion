@@ -1,6 +1,6 @@
 ﻿Public Class Enfermedad
 
-    Private DAO As DAOEpidemias
+    Private DAO As DAOEnfermedad
     Private id, n_focos, radio, contagiosa As Integer
     Private nombre, síntomas, localización, incubación, prevención, cura As String
 
@@ -95,7 +95,7 @@
     End Property
 
     Public Sub New()
-        Me.DAO = New DAOEpidemias
+        Me.DAO = New DAOEnfermedad
     End Sub
 
     Public Function readAll() As Collection

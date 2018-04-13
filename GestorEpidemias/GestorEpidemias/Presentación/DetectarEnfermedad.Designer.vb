@@ -30,6 +30,7 @@ Partial Class DetectarEnfermedad
         Me.Button1 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -75,7 +76,7 @@ Partial Class DetectarEnfermedad
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Button1.Location = New System.Drawing.Point(323, 377)
+        Me.Button1.Location = New System.Drawing.Point(390, 377)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 50)
         Me.Button1.TabIndex = 4
@@ -102,11 +103,22 @@ Partial Class DetectarEnfermedad
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Posible enfermedad"
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Button2.Location = New System.Drawing.Point(298, 377)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 50)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "Detectar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'DetectarEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 439)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button1)
@@ -129,4 +141,5 @@ Partial Class DetectarEnfermedad
     Friend WithEvents Button1 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button2 As Button
 End Class

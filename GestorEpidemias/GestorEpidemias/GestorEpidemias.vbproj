@@ -83,16 +83,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Pais.vb" />
     <Compile Include="Dominio\Empleado.vb" />
     <Compile Include="Dominio\Enfermedad.vb" />
+    <Compile Include="Persistencia\DAOPais.vb" />
     <Compile Include="Persistencia\DAOEmpleado.vb" />
+    <Compile Include="Presentación\VisualizarTabla.Designer.vb">
+      <DependentUpon>VisualizarTabla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentación\VisualizarTabla.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentación\LocalizarEnfermedad.Designer.vb">
       <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\LocalizarEnfermedad.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Persistencia\DAOEpidemias.vb" />
+    <Compile Include="Persistencia\DAOEnfermedad.vb" />
     <Compile Include="Persistencia\DBBroker.vb" />
     <Compile Include="Presentación\DetectarEnfermedad.Designer.vb">
       <DependentUpon>DetectarEnfermedad.vb</DependentUpon>
@@ -126,12 +134,6 @@
       <DependentUpon>VisualizarMapa.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentación\VisualizarMapa.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentación\VisualizarTabla.Designer.vb">
-      <DependentUpon>VisualizarTabla.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Presentación\VisualizarTabla.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
