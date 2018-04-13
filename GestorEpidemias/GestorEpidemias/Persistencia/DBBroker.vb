@@ -11,7 +11,6 @@ Public Class DBBroker
             mConexion = New MySqlConnection()
             mConexion.ConnectionString = "Server=localhost; Port=3306; Database=epidemias; Uid ='root'; pwd ='';"
             mConexion.Open()
-            MsgBox("Conectado")
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

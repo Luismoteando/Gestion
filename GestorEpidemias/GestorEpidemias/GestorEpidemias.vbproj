@@ -83,7 +83,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Empleado.vb" />
     <Compile Include="Dominio\Enfermedad.vb" />
+    <Compile Include="Persistencia\DAOEmpleado.vb" />
     <Compile Include="Presentación\LocalizarEnfermedad.Designer.vb">
       <DependentUpon>LocalizarEnfermedad.vb</DependentUpon>
     </Compile>
