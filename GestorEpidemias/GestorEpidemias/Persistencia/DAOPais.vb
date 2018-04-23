@@ -18,18 +18,23 @@ Public Class DAOPais
         reader = DBBroker.getDB.read(sql)
         _lista = New Collection
         While reader.Read()
-            Dim a As Pais = New Pais()
-            a.Codigo1 = Convert.ToString(reader(0))
-            a.Nombre1 = Convert.ToString(reader(1))
-            a.Capital1 = Convert.ToString(reader(2))
-            a.Habitantes1 = Integer.Parse(reader(3).ToString)
-            a.LatLon1 = reader(4)
-            a.Superficie1 = Convert.ToString(reader(5))
+            Try
+                Dim a As Pais = New Pais()
+                a.Codigo1 = Convert.ToString(reader(0))
+                a.Nombre1 = Convert.ToString(reader(1))
+                a.Capital1 = Convert.ToString(reader(2))
+                a.Habitantes1 = Integer.Parse(reader(3).ToString)
+                a.Latlon1 = reader(4)
+                a.Superficie1 = Convert.ToString(reader(5))
+                _lista.Add(a)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
 
-            _lista.Add(a)
         End While
 
         reader.Close()
     End Sub
+
 
 End Class

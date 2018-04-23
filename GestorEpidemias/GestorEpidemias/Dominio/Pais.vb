@@ -4,7 +4,7 @@ Public Class Pais
     Private DAO As DAOPais
     Private codigo, nombre, capital As String
     Private habitantes, superficie As Integer
-    Private latlon As Point
+    Private latlon As Byte()
 
     Public Property Codigo1 As String
         Get
@@ -51,11 +51,11 @@ Public Class Pais
         End Set
     End Property
 
-    Public Property LatLon1 As Point
+    Public Property Latlon1 As Byte()
         Get
             Return latlon
         End Get
-        Set(value As Point)
+        Set(value As Byte())
             latlon = value
         End Set
     End Property
