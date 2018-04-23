@@ -1,10 +1,12 @@
 ﻿Imports System.Windows
+Imports MySql.Data.Types
+
 Public Class Pais
 
     Private DAO As DAOPais
     Private codigo, nombre, capital As String
     Private habitantes, superficie As Integer
-    Private latlon As Byte()
+    Private latlon As MySqlGeometry
 
     Public Property Codigo1 As String
         Get
@@ -51,11 +53,11 @@ Public Class Pais
         End Set
     End Property
 
-    Public Property Latlon1 As Byte()
+    Public Property Latlon1 As MySqlGeometry
         Get
             Return latlon
         End Get
-        Set(value As Byte())
+        Set(value As MySqlGeometry)
             latlon = value
         End Set
     End Property

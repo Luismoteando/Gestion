@@ -4,7 +4,7 @@
         Dim c As Collection = pais.readAll()
         For Each emp In c
             'cbPais.Items.Add(pais.Nombre1)
-            cbPais.Items.Add(pais.LatLon1)
+            cbPais.Items.Add(pais.Latlon1.ToString)
         Next
     End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports MySql.Data.Types
 
 Public Class DAOPais
     Private _lista As Collection
@@ -24,7 +25,7 @@ Public Class DAOPais
                 a.Nombre1 = Convert.ToString(reader(1))
                 a.Capital1 = Convert.ToString(reader(2))
                 a.Habitantes1 = Integer.Parse(reader(3).ToString)
-                a.Latlon1 = reader(4)
+                a.Latlon1 = reader.GetMySqlGeometry(4)
                 a.Superficie1 = Convert.ToString(reader(5))
                 _lista.Add(a)
             Catch ex As Exception
