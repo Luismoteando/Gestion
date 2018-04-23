@@ -23,10 +23,13 @@ Public Class DAOPais
             a.Nombre1 = Convert.ToString(reader(1))
             a.Capital1 = Convert.ToString(reader(2))
             a.Habitantes1 = Integer.Parse(reader(3).ToString)
+            a.LatLon1 = reader(4)
             a.Superficie1 = Convert.ToString(reader(5))
 
             _lista.Add(a)
         End While
+
         reader.Close()
     End Sub
+
 End Class

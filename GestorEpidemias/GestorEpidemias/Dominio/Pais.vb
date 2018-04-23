@@ -4,7 +4,7 @@ Public Class Pais
     Private DAO As DAOPais
     Private codigo, nombre, capital As String
     Private habitantes, superficie As Integer
-    'Private long&lat As Structure Point 
+    Private latlon As Point
 
     Public Property Codigo1 As String
         Get
@@ -48,6 +48,15 @@ Public Class Pais
         End Get
         Set(value As Integer)
             superficie = value
+        End Set
+    End Property
+
+    Public Property LatLon1 As Point
+        Get
+            Return latlon
+        End Get
+        Set(value As Point)
+            latlon = value
         End Set
     End Property
 
