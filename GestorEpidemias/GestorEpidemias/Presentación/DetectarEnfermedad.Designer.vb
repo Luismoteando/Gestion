@@ -24,13 +24,13 @@ Partial Class DetectarEnfermedad
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DetectarEnfermedad))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.listSintomas = New System.Windows.Forms.CheckedListBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbEmpleados = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btDetectar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -43,15 +43,15 @@ Partial Class DetectarEnfermedad
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Seleccione los síntomas que padece el empleado:"
         '
-        'CheckedListBox1
+        'listSintomas
         '
-        Me.CheckedListBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Items.AddRange(New Object() {"Fiebre baja", "Congestión nasal", "Huesos y musculos doloridos", "Dificultad para respirar", "Aumento del ritmo cardíaco"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(88, 67)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(211, 184)
-        Me.CheckedListBox1.TabIndex = 1
+        Me.listSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.listSintomas.FormattingEnabled = True
+        Me.listSintomas.Items.AddRange(New Object() {"Fiebre baja", "Congestión nasal", "Huesos y musculos doloridos", "Dificultad para respirar", "Aumento del ritmo cardíaco"})
+        Me.listSintomas.Location = New System.Drawing.Point(88, 67)
+        Me.listSintomas.Name = "listSintomas"
+        Me.listSintomas.Size = New System.Drawing.Size(211, 184)
+        Me.listSintomas.TabIndex = 1
         '
         'Label2
         '
@@ -103,28 +103,28 @@ Partial Class DetectarEnfermedad
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Posible enfermedad"
         '
-        'Button2
+        'btDetectar
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Button2.Location = New System.Drawing.Point(298, 377)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 50)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Detectar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btDetectar.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.btDetectar.Location = New System.Drawing.Point(298, 377)
+        Me.btDetectar.Name = "btDetectar"
+        Me.btDetectar.Size = New System.Drawing.Size(75, 50)
+        Me.btDetectar.TabIndex = 7
+        Me.btDetectar.Text = "Detectar"
+        Me.btDetectar.UseVisualStyleBackColor = True
         '
         'DetectarEnfermedad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(736, 439)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btDetectar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cbEmpleados)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.CheckedListBox1)
+        Me.Controls.Add(Me.listSintomas)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DetectarEnfermedad"
@@ -135,11 +135,11 @@ Partial Class DetectarEnfermedad
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents listSintomas As CheckedListBox
     Friend WithEvents Label2 As Label
     Friend WithEvents cbEmpleados As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btDetectar As Button
 End Class

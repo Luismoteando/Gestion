@@ -12,7 +12,15 @@
         Me.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btDetectar.Click
+        Dim i As Integer
+        Dim sintomasEmpleado As New Collection
+        For i = 0 To listSintomas.Items.Count - 1
+            If listSintomas.GetItemChecked(i) Then
+                sintomasEmpleado.Add(listSintomas.Items(i).ToString)
+            End If
+        Next
+        MsgBox(sintomasEmpleado.Item(1))
     End Sub
+
 End Class
