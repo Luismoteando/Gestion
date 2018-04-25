@@ -3,8 +3,7 @@
         Dim pais As Pais = New Pais
         Dim c As Collection = pais.readAll()
         For Each emp In c
-            'cbPais.Items.Add(pais.Nombre1)
-            cbPais.Items.Add(pais.Latlon1.XCoordinate)
+            cbPais.Items.Add(emp.Nombre1)
         Next
     End Sub
 End Class
