@@ -29,17 +29,21 @@ Public Class VisualizarMapa
 
     Private Sub ComboBox1_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles ComboBox1.SelectionChangeCommitted
         Dim enf As New Enfermedad
-        Dim position As New MySqlGeometry
+        Dim latlon As New MySqlGeometry
 
         enf._nombre = ComboBox1.SelectedItem.ToString
 
         Try
             enf.readByName(enf)
-            position = enf.readLatLon(enf)
+            latlon = enf.readLatLon(enf)
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try
 
-        GMapControl1.Position = New PointLatLng(position.XCoordinate, position.YCoordinate)
+        GMapControl1.Position = New PointLatLng(latlon.XCoordinate, latlon.YCoordinate)
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class

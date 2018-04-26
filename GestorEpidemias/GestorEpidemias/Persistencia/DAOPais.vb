@@ -20,14 +20,14 @@ Public Class DAOPais
         _lista = New Collection
         While reader.Read()
             Try
-                Dim a As Pais = New Pais()
-                a.Codigo1 = Convert.ToString(reader(0))
-                a.Nombre1 = Convert.ToString(reader(1))
-                a.Capital1 = Convert.ToString(reader(2))
-                a.Habitantes1 = Integer.Parse(reader(3).ToString)
-                a.Latlon1 = reader.GetMySqlGeometry(4)
-                a.Superficie1 = Convert.ToString(reader(5))
-                _lista.Add(a)
+                Dim pais As Pais = New Pais()
+                pais.Codigo1 = Convert.ToString(reader(0))
+                Pais.Nombre1 = Convert.ToString(reader(1))
+                pais.Capital1 = Convert.ToString(reader(2))
+                pais.Habitantes1 = Integer.Parse(reader(3).ToString)
+                pais.Latlon1 = reader.GetMySqlGeometry(4)
+                pais.Superficie1 = Convert.ToString(reader(5))
+                _lista.Add(pais)
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try

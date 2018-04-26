@@ -108,6 +108,11 @@ Public Class Enfermedad
         DAO.readByName(enf)
     End Sub
 
+    Public Function readAllByCountry(ByVal pais As Pais) As Collection
+        DAO.readAllByCountry(pais)
+        Return DAO.lista
+    End Function
+
     Public Function readAll() As Collection
         DAO.readAll()
         Return DAO.lista

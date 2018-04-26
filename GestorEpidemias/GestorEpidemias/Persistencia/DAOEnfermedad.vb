@@ -45,11 +45,36 @@ Public Class DAOEnfermedad
         reader.Close()
     End Sub
 
+    Public Sub readAllByCountry(ByVal pais As Pais)
+        Dim reader As MySqlDataReader
+        Dim sql As String = "SELECT * FROM enfermedad WHERE `Localización de focos`='" & pais.Nombre1 & "';"
+        reader = DBBroker.getDB.read(sql)
+        _lista = New Collection
+
+        While reader.Read()
+            Dim enf As Enfermedad = New Enfermedad()
+            enf._id = Integer.Parse(reader(0).ToString)
+            enf._nombre = Convert.ToString(reader(1))
+            enf._sintomas = Convert.ToString(reader(2))
+            enf._nfocos = Integer.Parse(reader(3).ToString)
+            enf._localización = Convert.ToString(reader(4))
+            enf._incubacion = Convert.ToString(reader(5))
+            enf._radio = Integer.Parse(reader(6).ToString)
+            enf._contagiosa = Integer.Parse(reader(7).ToString)
+            enf._prevencion = Convert.ToString(reader(8))
+            enf._cura = Convert.ToString(reader(9))
+
+            _lista.Add(enf)
+        End While
+        reader.Close()
+    End Sub
+
     Public Sub readAll()
         Dim reader As MySqlDataReader
         Dim sql As String = "SELECT * FROM enfermedad;"
         reader = DBBroker.getDB.read(sql)
         _lista = New Collection
+
         While reader.Read()
             Dim a As Enfermedad = New Enfermedad()
             a._id = Integer.Parse(reader(0).ToString)
