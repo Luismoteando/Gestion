@@ -20,8 +20,9 @@
         Dim i As Integer
         Dim enf As Enfermedad = New Enfermedad()
         Dim p As Pais = New Pais()
-        Dim nombres As Collection = getNombres(empleados)
         Dim sintomasEmpleado As New Collection
+
+
 
         For i = 0 To listSintomas.Items.Count - 1
             If listSintomas.GetItemChecked(i) Then
@@ -34,13 +35,16 @@
 
         For Each enf In enfermedades
             Dim j As Integer
-            Dim sintomas As String() = enf._sintomas.Split(", ")
+            Dim sintomas As String() = enf._sintomas.Split(",")
             For j = 1 To sintomasEmpleado.Count
-                If sintomas.Contains(sintomasEmpleado.Item(j)) Then
-                    MsgBox(enf._nombre)
-                Else
-                    MsgBox("Error")
-                End If
+                For i = 0 To sintomas.Length - 1
+                    If sintomasEmpleado.Item(j).Equals(sintomas.GetValue(i)) Then
+                        Dim emp As Empleado = New Empleado()
+                        emp.Nombre = cbEmpleados.SelectedItem
+                        emp.read()
+
+                    End If
+                Next
             Next
         Next
     End Sub
