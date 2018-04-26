@@ -1,4 +1,6 @@
-﻿Public Class Enfermedad
+﻿Imports MySql.Data.Types
+
+Public Class Enfermedad
 
     Private DAO As DAOEnfermedad
     Private id, n_focos, radio, contagiosa As Integer
@@ -96,6 +98,14 @@
 
     Public Sub New()
         Me.DAO = New DAOEnfermedad
+    End Sub
+
+    Public Function readLatLon(ByVal enf As Enfermedad) As MySqlGeometry
+        Return DAO.readLatLon(enf)
+    End Function
+
+    Public Sub readByName(ByRef enf As Enfermedad)
+        DAO.readByName(enf)
     End Sub
 
     Public Function readAll() As Collection
