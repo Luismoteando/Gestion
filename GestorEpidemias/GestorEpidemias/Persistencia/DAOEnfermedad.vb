@@ -17,7 +17,7 @@ Public Class DAOEnfermedad
         Dim reader As MySqlDataReader
         Dim lat As Double
         Dim lon As Double
-        Dim sql As String = "SELECT X(LatLon), Y(LatLon) FROM pais WHERE Nombre=(SELECT `Localización de focos` FROM enfermedad WHERE ID=" & enf._id & ");"
+        Dim sql As String = "SELECT X(LatLon), Y(LatLon) FROM pais WHERE Código=(SELECT `Localización de focos` FROM enfermedad WHERE ID=" & enf._id & ");"
         reader = DBBroker.getDB.read(sql)
 
         While reader.Read()
