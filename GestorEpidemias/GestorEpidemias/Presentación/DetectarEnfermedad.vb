@@ -34,14 +34,12 @@
 
         For Each enf In enfermedades
             Dim j As Integer
-            Dim sintomas As String() = enf._sintomas.Split(",")
+            Dim sintomas As String() = enf._sintomas.Split(", ")
             For j = 1 To sintomasEmpleado.Count
                 If sintomas.Contains(sintomasEmpleado.Item(j)) Then
-
-                    If nombres.Contains(cbEmpleados.SelectedItem) Then
-                        MsgBox("OK")
-                    End If
-
+                    MsgBox(enf._nombre)
+                Else
+                    MsgBox("Error")
                 End If
             Next
         Next
