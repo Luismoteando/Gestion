@@ -33,12 +33,12 @@ Public Class VisualizarMapa
 
         enf._nombre = ComboBox1.SelectedItem.ToString
 
-        Try
-            enf.readByName(enf)
-            latlon = enf.readLatLon(enf)
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString())
-        End Try
+        'Try
+        enf.readByName(enf)
+        latlon = enf.readLatLon(enf)
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.ToString())
+        'End Try
 
         GMapControl1.Position = New PointLatLng(latlon.XCoordinate, latlon.YCoordinate)
     End Sub
