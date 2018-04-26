@@ -83,11 +83,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Viaje.vb" />
     <Compile Include="Dominio\Pais.vb" />
     <Compile Include="Dominio\Empleado.vb" />
     <Compile Include="Dominio\Enfermedad.vb" />
     <Compile Include="Persistencia\DAOPais.vb" />
     <Compile Include="Persistencia\DAOEmpleado.vb" />
+    <Compile Include="Persistencia\DAOViaje.vb" />
     <Compile Include="Presentación\VisualizarTabla.Designer.vb">
       <DependentUpon>VisualizarTabla.vb</DependentUpon>
     </Compile>

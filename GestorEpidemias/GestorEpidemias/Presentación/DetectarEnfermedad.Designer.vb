@@ -47,7 +47,7 @@ Partial Class DetectarEnfermedad
         '
         Me.listSintomas.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.listSintomas.FormattingEnabled = True
-        Me.listSintomas.Items.AddRange(New Object() {"Fiebre baja", "Congestión nasal", "Huesos y musculos doloridos", "Dificultad para respirar", "Aumento del ritmo cardíaco"})
+        Me.listSintomas.Items.AddRange(New Object() {"Fiebre baja", "Congestión nasal", "Huesos y musculos doloridos", "Dificultad para respirar", "Aumento del ritmo cardíaco", "Fiebre Alta", "Escalofríos", "Dolor de cabeza", "Náusea", "Dolor muscular", "Llagas en la piel", "Hemorragia nasal"})
         Me.listSintomas.Location = New System.Drawing.Point(88, 67)
         Me.listSintomas.Name = "listSintomas"
         Me.listSintomas.Size = New System.Drawing.Size(211, 184)
@@ -86,7 +86,7 @@ Partial Class DetectarEnfermedad
         'RichTextBox1
         '
         Me.RichTextBox1.BackColor = System.Drawing.Color.NavajoWhite
-        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RichTextBox1.Location = New System.Drawing.Point(445, 64)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(267, 245)

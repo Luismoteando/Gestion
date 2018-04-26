@@ -62,9 +62,17 @@
         Me.DAO = New DAOEmpleado
     End Sub
 
+    Public Sub New(id As Integer)
+        Me.Dni = id
+    End Sub
+
     Public Function readAll() As Collection
         DAO.readAll()
         Return DAO.lista
     End Function
+
+    Public Sub read()
+        DAO.readEmpleado(Me)
+    End Sub
 
 End Class

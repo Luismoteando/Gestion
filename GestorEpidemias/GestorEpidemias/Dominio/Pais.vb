@@ -66,6 +66,10 @@ Public Class Pais
         Me.DAO = New DAOPais
     End Sub
 
+    Public Sub New(id As String)
+        Me.codigo = id
+    End Sub
+
     Public Function readAll() As Collection
         DAO.readAll()
         Return DAO.lista
