@@ -38,4 +38,20 @@ Public Class DAOPais
     End Sub
 
 
+    Public Sub readByName(ByRef p As Pais)
+        Dim reader As MySqlDataReader
+        Dim sql As String = "SELECT * FROM pais WHERE Nombre='" & p.Nombre1 & "';"
+        reader = DBBroker.getDB.read(sql)
+
+        While reader.Read()
+            p.Codigo1 = Convert.ToString(reader(0))
+            p.Capital1 = Convert.ToString(reader(2))
+            p.Habitantes1 = Integer.Parse(reader(3).ToString)
+            p.Latlon1 = reader.GetMySqlGeometry(4)
+            p.Superficie1 = Convert.ToString(reader(5))
+        End While
+        reader.Close()
+    End Sub
+
+
 End Class

@@ -51,7 +51,7 @@ Public Class DAOEnfermedad
 
     Public Sub readAllByCountry(ByVal pais As Pais)
         Dim reader As MySqlDataReader
-        Dim sql As String = "SELECT * FROM enfermedad WHERE `Localización de focos`='" & pais.Nombre1 & "';"
+        Dim sql As String = "SELECT * FROM enfermedad WHERE `Localización de focos`='" & pais.Codigo1 & "';"
         reader = DBBroker.getDB.read(sql)
         _lista = New Collection
 

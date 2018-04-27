@@ -74,4 +74,8 @@ Public Class Pais
         DAO.readAll()
         Return DAO.lista
     End Function
+
+    Public Sub readByName()
+        DAO.readByName(Me)
+    End Sub
 End Class

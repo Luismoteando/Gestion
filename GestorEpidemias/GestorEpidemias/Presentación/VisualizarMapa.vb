@@ -36,7 +36,7 @@ Public Class VisualizarMapa
         Try
             enf.readByName(enf)
             latlon = enf.readLatLon(enf)
-            'MsgBox(latlon.XCoordinate + ", " + latlon.YCoordinate)
+
         Catch ex As Exception
             MessageBox.Show(ex.ToString())
         End Try

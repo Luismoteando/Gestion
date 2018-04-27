@@ -22,6 +22,7 @@
         ListBox1.Items.Clear()
         ListBox2.Items.Clear()
         pais.Nombre1 = cbPais.SelectedItem.ToString
+        pais.readByName()
 
         Try
             enfs = enf.readAllByCountry(pais)
